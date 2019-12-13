@@ -22,7 +22,7 @@ class CheckoutForm extends Component {
     try {
       let { token } = await this.props.stripe.createToken({ name: this.state.name })
       let amount = this.state.amount
-      let response = await fetch('http://localhost:9000/charge', {
+      let response = await fetch('/charge', {
         method: 'POST',
         headers: {
           "Content-Type": "text/plain"
