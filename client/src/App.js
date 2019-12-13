@@ -176,7 +176,6 @@ class App extends React.Component {
 
   render() {
     localStorage.setItem('cart', JSON.stringify(this.state.cart))
-
     return (
         <div className="App">
           <Switch>

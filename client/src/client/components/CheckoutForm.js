@@ -34,7 +34,7 @@ class CheckoutForm extends Component {
         this.props.cart.forEach((item) => {
           let user_id = this.props.user.id
           let drawing_id = item.id
-          fetch('http://localhost:3000/transactions', {
+          fetch('/api/v1/transactions', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

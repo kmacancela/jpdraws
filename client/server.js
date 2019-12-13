@@ -12,6 +12,7 @@ app.get('/charge', function (req, res) {
 })
 
 app.post('/charge', async (req, res) => {
+  console.log("yay?", process.env.REACT_APP_SECRET_KEY, req.body)
   let bodyStuff = req.body.split('&')
   let token = bodyStuff[0]
   let amount = (parseInt(bodyStuff[1]) * 100).toString()
