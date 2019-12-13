@@ -7,7 +7,6 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "node client/server.js",
     "build": "cd client && npm install && npm run build && cd ..",
     "deploy": "cp -a client/build/. public/",
     "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
@@ -21,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/BennyLouie/jp-draws-backend/issues"
   },
-  "homepage": "https://github.com/BennyLouie/jp-draws-backend#readme"
+  "homepage": "https://github.com/BennyLouie/jp-draws-backend#readme",
+  "engines": {
+    "node": "12.9.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
 }
