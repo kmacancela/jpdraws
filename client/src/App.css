@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Boogaloo&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); */
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: #99999;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+a {
+  color: black;
+}
+
+.titleSub {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  padding-left: 300px;
+  margin-top:-12px;
+}
+
+.topNav > span {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
+
+.App {
+  margin: 1% 6% 0% 6%;
+  text-align: center;
+  /* padding: 100px; */
+  /* background-color: red; */
+}
+
+.App-header {
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+
+  /* background-color:#ddd;
+  position: fixed;
+  padding: 2em;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%); */
+}
+
+.headerText {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+}
+
+.headerLinks > a {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.headerLinks > a:hover {
+  color: gray;
+}
+
+.collection > img {
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+figure > img {
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+  cursor: pointer;
+}
+
+figcaption {
+  margin: 10px 0 0 0;
+  font-variant: small-caps;
+}
+
+.topNav {
+  text-align: right;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+  padding: 30px;
+  /* background-color: #375E97; */
+  /* width: 100%; */
+}
+
+.nav-item {
+  padding: 20px;
+}
+
+.nav-item:hover {
+  /* margin-top: 5rem; */
+  border-bottom: 4px solid #000;
+  /* display: inline-block; */
+  padding-bottom: 10px;
+  background-color: #e3e3e3
+}
+
+.signOut {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+  width: 100px;
+  height: 40px;
+  background-color: lightgray;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  /* background-color: red; */
+}
+
+.column > h1 {
+  text-align: left;
+  color: #636363;
+  padding-left: 35px;
+}
+
+.column > h2 {
+  text-align: left;
+  color: #636363;
+}
+
+.column > h4 {
+  text-align: left;
+  /* padding-left: 35px; */
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.specs {
+  text-align: left;
+  color: #636363;
+  /* background-color: #e0e0e0; */
+  height: 550px;
+}
+
+.specs > h4 {
+  margin-top:-20px;
+}
+
+.btn-item {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Boogaloo', cursive;
+}
+
+.cart-item {
+  width: 90%;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.cart-item > img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  float:left;
+  /* cursor: pointer; */
+}
+
+.cart-item > figcaption {
+  text-align: left;
+}
+
+.div-form {
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  width:60%;
+  height: 500px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.div-form > form {
+  text-align: left;
+  /* padding-top: 100px; */
+}
+
+.div-form > h1 {
+  color: #636363;
+}
+
+.error {
+  color: red;
+}
+
+input, .cardElement {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

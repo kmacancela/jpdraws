@@ -1,0 +1,60 @@
+{
+  "name": "jp-draws",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "axios": "^0.19.0",
+    "bearer": "0.0.20",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.0.1",
+    "express": "^4.17.1",
+    "history": "^4.10.1",
+    "node-sass": "^4.13.0",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.2.0",
+    "react-stripe-checkout": "^2.6.3",
+    "react-stripe-elements": "^5.1.0",
+    "sass-loader": "^7.3.1",
+    "shebang-regex": "^3.0.0",
+    "start": "^5.1.0",
+    "stripe": "^7.13.0",
+    "style-loader": "^0.23.1",
+    "styled-components": "^4.4.1",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.6.4",
+    "webpack": "4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
