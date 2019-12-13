@@ -56,7 +56,7 @@ class App extends React.Component {
     let username = event.target.username.value
     let password = event.target.password.value
     console.log("EVENT", username, password)
-    return fetch("http://localhost:3000/login", {
+    return fetch("/api/v1/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -94,7 +94,7 @@ class App extends React.Component {
   }
 
   getUser = () => {
-    return fetch(`http://localhost:3000/users/${this.state.user_id}`, {
+    return fetch(`/api/v1/users/${this.state.user_id}`, {
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -122,7 +122,7 @@ class App extends React.Component {
   newUser = (event) => {
     let username = event.target.username.value
     let password = event.target.password.value
-    return fetch("http://localhost:3000/users", {
+    return fetch("/api/v1/users", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
