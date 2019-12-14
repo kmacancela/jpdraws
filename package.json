@@ -7,10 +7,14 @@
     "lib": "lib"
   },
   "scripts": {
+    "start": "node client/server",
     "build": "cd client && npm install && npm run build && cd ..",
     "deploy": "cp -a client/build/. public/",
     "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   },
+  "cacheDirectories": [
+    "client/node_modules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BennyLouie/jp-draws-backend.git"
@@ -27,5 +31,11 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2"
-  }
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ]
 }

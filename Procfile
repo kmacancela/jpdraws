@@ -1,2 +1,2 @@
 web: bundle exec rails s
-web: node client/server.js
+web: PORT=9000 node client/server.js

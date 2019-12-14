@@ -32,4 +32,4 @@ app.post('/charge', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`Listening to node server on port ${PORT}`))
