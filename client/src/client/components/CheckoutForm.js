@@ -19,9 +19,11 @@ class CheckoutForm extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault()
+    console.log("1")
     try {
       let { token } = await this.props.stripe.createToken({ name: this.state.name })
       let amount = this.state.amount
+      console.log("2", token, amount)
       let response = await fetch('http://localhost:9000/charge', {
         method: 'POST',
         headers: {
@@ -29,6 +31,7 @@ class CheckoutForm extends Component {
         },
         body: token.id + "&" + amount
       })
+      console.log("3", response)
       if (response.ok) {
         this.setState({complete: true})
         this.props.cart.forEach((item) => {
