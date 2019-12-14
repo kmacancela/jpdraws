@@ -17546,3 +17546,207 @@ Processing by Api::V1::UsersController#show as JSON
 Completed 200 OK in 105ms (Views: 97.1ms | ActiveRecord: 6.2ms | Allocations: 55734)
 
 
+Started POST "/api/v1/login" for 127.0.0.1 at 2019-12-13 20:27:07 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::LoginController#create as JSON
+  Parameters: {"username"=>"benben", "password"=>"[FILTERED]", "login"=>{"username"=>"benben", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (lower(username) = 'benben') LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/login_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 252ms (Views: 2.9ms | ActiveRecord: 10.4ms | Allocations: 8147)
+
+
+Started GET "/api/v1/users/1" for 127.0.0.1 at 2019-12-13 20:27:07 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (218.48ms)
+Completed 200 OK in 246ms (Views: 200.6ms | ActiveRecord: 41.1ms | Allocations: 69630)
+
+
+Started POST "/api/v1/transactions" for 127.0.0.1 at 2019-12-13 20:27:15 -0500
+Processing by Api::V1::TransactionsController#create as JSON
+  Parameters: {"user_id"=>1, "drawing_id"=>1, "transaction"=>{"user_id"=>1, "drawing_id"=>1}}
+[31mUnpermitted parameter: :transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/transactions_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/transactions_controller.rb:15:in `create'
+  [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/transactions_controller.rb:15:in `create'
+  [1m[36mTransaction Create (1.8ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "drawing_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["drawing_id", 1], ["created_at", "2019-12-14 01:27:15.898559"], ["updated_at", "2019-12-14 01:27:15.898559"]]
+  ↳ app/controllers/api/v1/transactions_controller.rb:15:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/transactions_controller.rb:15:in `create'
+[active_model_serializers] Rendered TransactionSerializer with ActiveModelSerializers::Adapter::Attributes (4.31ms)
+Completed 200 OK in 23ms (Views: 5.0ms | ActiveRecord: 3.6ms | Allocations: 5725)
+
+
+Started GET "/api/v1/users/1" for 127.0.0.1 at 2019-12-13 20:27:15 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+[active_model_serializers]   [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mDrawing Load (0.2ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mCACHE Drawing Load (0.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:11:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (89.58ms)
+Completed 200 OK in 95ms (Views: 86.9ms | ActiveRecord: 5.8ms | Allocations: 55934)
+
+
