@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A dynamic e-commerce web app that was built with:
+- JavaScript, 
+- Ruby on Rails, 
+- Node.js, 
+- Stripe API (https://stripe.com/), and
+- Custom CSS.
 
-Things you may want to cover:
+JPChigne was built with the purpose to sell artwork pieces created by artist, Jean-Pierre Chigne (https://www.instagram.com/jpchignedraws/), with collaborator Benny Louie, a fellow Flatiron-graduate Software Engineer. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Check the live demo: https://jpdraws.herokuapp.com/
