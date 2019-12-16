@@ -4,7 +4,7 @@ A dynamic e-commerce web app that was built with:
 - JavaScript, 
 - Ruby on Rails, 
 - Node.js, 
-- Stripe API (https://stripe.com/), and
+- Stripe API (https://stripe.com/)
 - Custom CSS
 - bcrypt
 - JWT
