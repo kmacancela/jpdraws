@@ -9,6 +9,4 @@ A dynamic e-commerce web app that was built with:
 - bcrypt
 - JWT
 
-JPChigne was built with the purpose to sell artwork pieces created by artist, Jean-Pierre Chigne (https://www.instagram.com/jpchignedraws/), with collaborator Benny Louie, a fellow Flatiron-graduate Software Engineer. 
-
 Check the demo: https://youtu.be/NZ8XEAmZELM
